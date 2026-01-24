@@ -146,6 +146,18 @@ body {
     margin: 0 10px;
 }
 
+/* 상단 버튼 영역 스타일 */
+.button-area.top-buttons {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+}
+
 /* 푸터 */
 footer {
     text-align: center;
@@ -833,6 +845,17 @@ footer {
         min-width: 120px;
         font-size: 0.75rem;
     }
+
+    /* 상단 버튼 모바일 스타일 */
+    .button-area.top-buttons {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    .button-area.top-buttons .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -868,5 +891,17 @@ footer {
 
     .answer-btn {
         font-size: 0.7rem;
+    }
+
+    /* 상단 버튼 작은 화면 스타일 */
+    .button-area.top-buttons {
+        padding: 12px;
+        top: 5px;
+    }
+
+    .button-area.top-buttons .btn {
+        display: block;
+        width: 100%;
+        margin: 8px 0;
     }
 }
