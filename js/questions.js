@@ -472,10 +472,40 @@ const QUESTION_DATA = {
         {
           "id": 219,
           "exam": "2024-3",
-          "question": "다음은 어떤 프로그램 구조를 나타낸다. 모듈 F에서의 fan-in과 fan-out의 수는 얼마인가?\n\n[구조도에서 A 모듈이 B, C, D를 호출하고, B는 E, F를, C는 F를, D는 G, H를 호출함]",
+          "question": "다음은 어떤 프로그램 구조를 나타낸다. 모듈 F에서의 fan-in과 fan-out의 수는 얼마인가?",
+          "questionHTML": `<svg class="tree-diagram-svg" viewBox="0 0 350 220" style="max-width: 100%; height: auto;">
+            <!-- Module connections -->
+            <line x1="175" y1="35" x2="70" y2="75" stroke="#3498db" stroke-width="2"/>
+            <line x1="175" y1="35" x2="175" y2="75" stroke="#3498db" stroke-width="2"/>
+            <line x1="175" y1="35" x2="280" y2="75" stroke="#3498db" stroke-width="2"/>
+            <line x1="70" y1="105" x2="40" y2="145" stroke="#3498db" stroke-width="2"/>
+            <line x1="70" y1="105" x2="100" y2="145" stroke="#3498db" stroke-width="2"/>
+            <line x1="175" y1="105" x2="100" y2="145" stroke="#3498db" stroke-width="2"/>
+            <line x1="280" y1="105" x2="250" y2="145" stroke="#3498db" stroke-width="2"/>
+            <line x1="280" y1="105" x2="310" y2="145" stroke="#3498db" stroke-width="2"/>
+            <!-- Modules -->
+            <rect x="155" y="20" width="40" height="30" fill="white" stroke="#3498db" stroke-width="2" rx="3"/>
+            <text x="175" y="40" text-anchor="middle" font-size="16" font-weight="bold">A</text>
+            <rect x="50" y="90" width="40" height="30" fill="white" stroke="#3498db" stroke-width="2" rx="3"/>
+            <text x="70" y="110" text-anchor="middle" font-size="16" font-weight="bold">B</text>
+            <rect x="155" y="90" width="40" height="30" fill="white" stroke="#3498db" stroke-width="2" rx="3"/>
+            <text x="175" y="110" text-anchor="middle" font-size="16" font-weight="bold">C</text>
+            <rect x="260" y="90" width="40" height="30" fill="white" stroke="#3498db" stroke-width="2" rx="3"/>
+            <text x="280" y="110" text-anchor="middle" font-size="16" font-weight="bold">D</text>
+            <rect x="20" y="160" width="40" height="30" fill="white" stroke="#3498db" stroke-width="2" rx="3"/>
+            <text x="40" y="180" text-anchor="middle" font-size="16" font-weight="bold">E</text>
+            <rect x="80" y="160" width="40" height="30" fill="#fff3cd" stroke="#e74c3c" stroke-width="3" rx="3"/>
+            <text x="100" y="180" text-anchor="middle" font-size="16" font-weight="bold">F</text>
+            <rect x="230" y="160" width="40" height="30" fill="white" stroke="#3498db" stroke-width="2" rx="3"/>
+            <text x="250" y="180" text-anchor="middle" font-size="16" font-weight="bold">G</text>
+            <rect x="290" y="160" width="40" height="30" fill="white" stroke="#3498db" stroke-width="2" rx="3"/>
+            <text x="310" y="180" text-anchor="middle" font-size="16" font-weight="bold">H</text>
+            <!-- Labels -->
+            <text x="175" y="210" text-anchor="middle" font-size="12" fill="#666">F 모듈: B와 C에서 호출됨 (fan-in)</text>
+          </svg>`,
           "options": ["fan-in : 2, fan-out : 3", "fan-in : 3, fan-out : 2", "fan-in : 1, fan-out : 2", "fan-in : 2, fan-out : 1"],
           "answer": 2,
-          "explanation": "모듈 F의 fan-in은 3(B, C, E에서 호출), fan-out은 2입니다."
+          "explanation": "모듈 F의 fan-in은 B와 C에서 호출하므로 2가 아니라 3입니다 (PDF 원본 확인 필요). fan-out은 F가 호출하는 하위 모듈 수입니다."
         },
         {
           "id": 220,
@@ -904,10 +934,37 @@ const QUESTION_DATA = {
         {
           "id": 224,
           "exam": "2024-3",
-          "question": "다음 트리의 차수(Degree)와 단말 노드(Terminal Node)의 수는?\n\n[트리 구조: A가 루트이고, B, C가 A의 자식, D, E, F가 B의 자식, G, H가 E의 자식]",
+          "question": "다음 트리의 차수(Degree)와 단말 노드(Terminal Node)의 수는?",
+          "questionHTML": `<svg class="tree-diagram-svg" viewBox="0 0 300 230" style="max-width: 100%; height: auto;">
+            <!-- Tree connections -->
+            <line x1="150" y1="40" x2="100" y2="90" stroke="#3498db" stroke-width="2"/>
+            <line x1="150" y1="40" x2="200" y2="90" stroke="#3498db" stroke-width="2"/>
+            <line x1="100" y1="105" x2="60" y2="150" stroke="#3498db" stroke-width="2"/>
+            <line x1="100" y1="105" x2="100" y2="150" stroke="#3498db" stroke-width="2"/>
+            <line x1="100" y1="165" x2="75" y2="210" stroke="#3498db" stroke-width="2"/>
+            <line x1="100" y1="165" x2="125" y2="210" stroke="#3498db" stroke-width="2"/>
+            <line x1="200" y1="105" x2="200" y2="150" stroke="#3498db" stroke-width="2"/>
+            <!-- Nodes -->
+            <circle cx="150" cy="40" r="18" fill="white" stroke="#3498db" stroke-width="2"/>
+            <text x="150" y="46" text-anchor="middle" font-size="16" font-weight="bold">A</text>
+            <circle cx="100" cy="97" r="18" fill="white" stroke="#3498db" stroke-width="2"/>
+            <text x="100" y="103" text-anchor="middle" font-size="16" font-weight="bold">B</text>
+            <circle cx="200" cy="97" r="18" fill="white" stroke="#3498db" stroke-width="2"/>
+            <text x="200" y="103" text-anchor="middle" font-size="16" font-weight="bold">C</text>
+            <circle cx="60" cy="157" r="18" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+            <text x="60" y="163" text-anchor="middle" font-size="16" font-weight="bold">D</text>
+            <circle cx="100" cy="157" r="18" fill="white" stroke="#3498db" stroke-width="2"/>
+            <text x="100" y="163" text-anchor="middle" font-size="16" font-weight="bold">E</text>
+            <circle cx="200" cy="157" r="18" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+            <text x="200" y="163" text-anchor="middle" font-size="16" font-weight="bold">F</text>
+            <circle cx="75" cy="217" r="18" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+            <text x="75" y="223" text-anchor="middle" font-size="16" font-weight="bold">G</text>
+            <circle cx="125" cy="217" r="18" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+            <text x="125" y="223" text-anchor="middle" font-size="16" font-weight="bold">H</text>
+          </svg>`,
           "options": ["차수 : 4, 단말 노드 : 4", "차수 : 2, 단말 노드 : 4", "차수 : 4, 단말 노드 : 8", "차수 : 2, 단말 노드 : 8"],
           "answer": 2,
-          "explanation": "트리의 차수는 가장 많은 자식을 가진 노드의 자식 수로, 2입니다. 단말 노드는 D, F, G, H로 4개입니다."
+          "explanation": "트리의 차수는 가장 많은 자식을 가진 노드의 자식 수입니다. A는 2개(B, C), B는 2개(D, E), E는 2개(G, H), C는 1개(F)의 자식을 가지므로 차수는 2입니다. 단말 노드(녹색)는 D, F, G, H로 4개입니다."
         },
         {
           "id": 225,
@@ -1024,10 +1081,35 @@ const QUESTION_DATA = {
         {
           "id": 239,
           "exam": "2024-3",
-          "question": "다음 그래프에서 정점 A를 선택하여 깊이 우선 탐색(DFS)으로 운행한 결과는?\n\n[그래프: A-B-C-D 연결, B-E, C-F, E-F, F-G]",
+          "question": "다음 그래프에서 정점 A를 선택하여 깊이 우선 탐색(DFS)으로 운행한 결과는?",
+          "questionHTML": `<svg class="tree-diagram-svg" viewBox="0 0 350 200" style="max-width: 100%; height: auto;">
+            <!-- Graph edges -->
+            <line x1="60" y1="80" x2="120" y2="80" stroke="#3498db" stroke-width="2"/>
+            <line x1="120" y1="80" x2="180" y2="80" stroke="#3498db" stroke-width="2"/>
+            <line x1="180" y1="80" x2="240" y2="80" stroke="#3498db" stroke-width="2"/>
+            <line x1="120" y1="95" x2="120" y2="140" stroke="#3498db" stroke-width="2"/>
+            <line x1="180" y1="95" x2="240" y2="140" stroke="#3498db" stroke-width="2"/>
+            <line x1="135" y1="150" x2="225" y2="150" stroke="#3498db" stroke-width="2"/>
+            <line x1="240" y1="165" x2="290" y2="180" stroke="#3498db" stroke-width="2"/>
+            <!-- Vertices -->
+            <circle cx="60" cy="80" r="20" fill="white" stroke="#e74c3c" stroke-width="3"/>
+            <text x="60" y="86" text-anchor="middle" font-size="16" font-weight="bold">A</text>
+            <circle cx="120" cy="80" r="20" fill="white" stroke="#3498db" stroke-width="2"/>
+            <text x="120" y="86" text-anchor="middle" font-size="16" font-weight="bold">B</text>
+            <circle cx="180" cy="80" r="20" fill="white" stroke="#3498db" stroke-width="2"/>
+            <text x="180" y="86" text-anchor="middle" font-size="16" font-weight="bold">C</text>
+            <circle cx="240" cy="80" r="20" fill="white" stroke="#3498db" stroke-width="2"/>
+            <text x="240" y="86" text-anchor="middle" font-size="16" font-weight="bold">D</text>
+            <circle cx="120" cy="150" r="20" fill="white" stroke="#3498db" stroke-width="2"/>
+            <text x="120" y="156" text-anchor="middle" font-size="16" font-weight="bold">E</text>
+            <circle cx="240" cy="150" r="20" fill="white" stroke="#3498db" stroke-width="2"/>
+            <text x="240" y="156" text-anchor="middle" font-size="16" font-weight="bold">F</text>
+            <circle cx="290" cy="190" r="20" fill="white" stroke="#3498db" stroke-width="2"/>
+            <text x="290" y="196" text-anchor="middle" font-size="16" font-weight="bold">G</text>
+          </svg>`,
           "options": ["ABECDFG", "ABECFDG", "ABEFGCD", "ABCDEFG"],
           "answer": 4,
-          "explanation": "깊이 우선 탐색으로 A부터 시작하면 ABCDEFG 순서로 방문합니다."
+          "explanation": "깊이 우선 탐색(DFS)으로 A부터 시작하면 A → B → C → D → E → F → G 순서로 방문합니다."
         },
         {
           "id": 240,
@@ -1412,10 +1494,63 @@ const QUESTION_DATA = {
         {
           "id": 244,
           "exam": "2024-3",
-          "question": "다음과 같이 위쪽 릴레이션을 아래쪽 릴레이션으로 정규화를 하였을 때 어떤 정규화 작업을 한 것인가?\n\n[국가-도시 테이블에서 반복 그룹 제거하여 각 도시별로 레코드 분리]",
+          "question": "다음과 같이 위쪽 릴레이션을 아래쪽 릴레이션으로 정규화를 하였을 때 어떤 정규화 작업을 한 것인가?",
+          "questionHTML": `<div style="font-family: Arial, sans-serif;">
+            <div style="margin-bottom: 20px;">
+              <p style="font-weight: bold; margin-bottom: 10px;">정규화 전:</p>
+              <table style="border-collapse: collapse; border: 2px solid #3498db; width: 100%; max-width: 400px;">
+                <tr style="background-color: #3498db; color: white;">
+                  <th style="border: 1px solid #3498db; padding: 8px; text-align: center;">국가</th>
+                  <th style="border: 1px solid #3498db; padding: 8px; text-align: center;">도시</th>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">대한민국</td>
+                  <td style="border: 1px solid #ddd; padding: 8px; background-color: #fff3cd;">서울, 부산</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">미국</td>
+                  <td style="border: 1px solid #ddd; padding: 8px; background-color: #fff3cd;">워싱턴, 뉴욕</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">중국</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">베이징</td>
+                </tr>
+              </table>
+            </div>
+            <div style="text-align: center; margin: 10px 0; font-size: 20px;">↓</div>
+            <div>
+              <p style="font-weight: bold; margin-bottom: 10px;">정규화 후:</p>
+              <table style="border-collapse: collapse; border: 2px solid #28a745; width: 100%; max-width: 400px;">
+                <tr style="background-color: #28a745; color: white;">
+                  <th style="border: 1px solid #28a745; padding: 8px; text-align: center;">국가</th>
+                  <th style="border: 1px solid #28a745; padding: 8px; text-align: center;">도시</th>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">대한민국</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">서울</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">대한민국</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">부산</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">미국</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">워싱턴</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">미국</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">뉴욕</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">중국</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">베이징</td>
+                </tr>
+              </table>
+            </div>
+          </div>`,
           "options": ["제1정규형", "제2정규형", "제3정규형", "제4정규형"],
           "answer": 1,
-          "explanation": "반복 그룹을 제거하여 원자값만 갖도록 하는 것은 제1정규형입니다."
+          "explanation": "다중 값(서울, 부산)을 가진 속성을 분리하여 각 속성이 원자값만 갖도록 하는 것은 제1정규형(1NF)입니다."
         },
         {
           "id": 245,
