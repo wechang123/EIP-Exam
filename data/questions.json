@@ -1,0 +1,734 @@
+{
+  "subjects": [
+    {
+      "id": 1,
+      "name": "소프트웨어 설계",
+      "questions": [
+        {
+          "id": 1,
+          "question": "다음 중 애자일(Agile) 방법론의 4가지 핵심 가치에 해당하지 않는 것은?",
+          "options": ["개인과 상호작용", "작동하는 소프트웨어", "포괄적인 문서화", "변화에 대한 대응"],
+          "answer": 3,
+          "explanation": "애자일의 4가지 핵심 가치는 '개인과 상호작용', '작동하는 소프트웨어', '고객과의 협력', '변화에 대한 대응'입니다. '포괄적인 문서화'는 전통적인 개발 방법론에서 중시하는 가치입니다."
+        },
+        {
+          "id": 2,
+          "question": "XP(eXtreme Programming)의 5가지 핵심 가치에 해당하지 않는 것은?",
+          "options": ["용기(Courage)", "존중(Respect)", "문서화(Documentation)", "피드백(Feedback)"],
+          "answer": 3,
+          "explanation": "XP의 5가지 핵심 가치는 의사소통(Communication), 단순성(Simplicity), 용기(Courage), 존중(Respect), 피드백(Feedback)입니다."
+        },
+        {
+          "id": 3,
+          "question": "요구사항 개발 프로세스의 올바른 순서는?",
+          "options": ["도출 → 분석 → 명세 → 확인", "분석 → 도출 → 명세 → 확인", "도출 → 명세 → 분석 → 확인", "명세 → 도출 → 분석 → 확인"],
+          "answer": 1,
+          "explanation": "요구사항 개발 프로세스는 도출(Elicitation) → 분석(Analysis) → 명세(Specification) → 확인(Validation) 순서로 진행됩니다."
+        },
+        {
+          "id": 4,
+          "question": "UML의 구성요소가 아닌 것은?",
+          "options": ["사물(Things)", "관계(Relationships)", "다이어그램(Diagrams)", "알고리즘(Algorithms)"],
+          "answer": 4,
+          "explanation": "UML의 3가지 구성요소는 사물(Things), 관계(Relationships), 다이어그램(Diagrams)입니다."
+        },
+        {
+          "id": 5,
+          "question": "다음 중 UML의 구조적(정적) 다이어그램이 아닌 것은?",
+          "options": ["클래스 다이어그램", "객체 다이어그램", "시퀀스 다이어그램", "컴포넌트 다이어그램"],
+          "answer": 3,
+          "explanation": "시퀀스 다이어그램은 행위적(동적) 다이어그램입니다. 구조적 다이어그램에는 클래스, 객체, 컴포넌트, 배치, 복합구조, 패키지 다이어그램이 있습니다."
+        },
+        {
+          "id": 6,
+          "question": "자료 사전(Data Dictionary)에서 '반복'을 나타내는 기호는?",
+          "options": ["=", "+", "{ }", "[ | ]"],
+          "answer": 3,
+          "explanation": "자료 사전 기호: = (정의), + (연결), () (생략 가능), {} (반복), [|] (선택), ** (주석)"
+        },
+        {
+          "id": 7,
+          "question": "결합도(Coupling)가 가장 약한 것은?",
+          "options": ["내용 결합도", "공통 결합도", "자료 결합도", "제어 결합도"],
+          "answer": 3,
+          "explanation": "결합도 순서(약→강): 자료 → 스탬프 → 제어 → 외부 → 공통 → 내용"
+        },
+        {
+          "id": 8,
+          "question": "응집도(Cohesion)가 가장 강한 것은?",
+          "options": ["기능적 응집도", "순차적 응집도", "교환적 응집도", "논리적 응집도"],
+          "answer": 1,
+          "explanation": "응집도 순서(약→강): 우연적 → 논리적 → 시간적 → 절차적 → 교환적 → 순차적 → 기능적"
+        },
+        {
+          "id": 9,
+          "question": "GoF(Gang of Four) 디자인 패턴 중 생성 패턴에 해당하지 않는 것은?",
+          "options": ["Factory Method", "Singleton", "Adapter", "Builder"],
+          "answer": 3,
+          "explanation": "Adapter는 구조 패턴입니다. 생성 패턴에는 Factory Method, Abstract Factory, Builder, Prototype, Singleton이 있습니다."
+        },
+        {
+          "id": 10,
+          "question": "객체지향의 특징 중 '하나의 메시지에 대해 각 객체가 가지고 있는 고유한 방법으로 응답할 수 있는 능력'을 무엇이라 하는가?",
+          "options": ["캡슐화", "상속", "다형성", "추상화"],
+          "answer": 3,
+          "explanation": "다형성(Polymorphism)은 하나의 메시지에 대해 각 객체가 고유한 방법으로 응답하는 능력입니다."
+        },
+        {
+          "id": 11,
+          "question": "SOLID 원칙 중 '클래스는 확장에는 열려 있고, 변경에는 닫혀 있어야 한다'는 원칙은?",
+          "options": ["단일 책임 원칙", "개방-폐쇄 원칙", "리스코프 치환 원칙", "인터페이스 분리 원칙"],
+          "answer": 2,
+          "explanation": "개방-폐쇄 원칙(OCP: Open-Closed Principle)은 확장에는 열려있고, 변경에는 닫혀있어야 한다는 원칙입니다."
+        },
+        {
+          "id": 12,
+          "question": "다음 중 미들웨어의 종류가 아닌 것은?",
+          "options": ["RPC", "MOM", "ORB", "CPU"],
+          "answer": 4,
+          "explanation": "미들웨어 종류: DB, RPC, MOM, TP Monitor, ORB, WAS 등. CPU는 하드웨어입니다."
+        },
+        {
+          "id": 13,
+          "question": "사용자 인터페이스 유형 중 터치, 음성 등 인간의 자연스러운 행동으로 기기를 조작하는 것은?",
+          "options": ["CLI", "GUI", "NUI", "OUI"],
+          "answer": 3,
+          "explanation": "NUI(Natural User Interface)는 터치, 음성 등 인간의 자연스러운 행동으로 기기를 조작하는 인터페이스입니다."
+        },
+        {
+          "id": 14,
+          "question": "폭포수 모델의 특징으로 옳지 않은 것은?",
+          "options": ["각 단계가 순차적으로 진행", "문서 중심의 개발", "요구사항 변경에 유연함", "고전적인 생명주기 모델"],
+          "answer": 3,
+          "explanation": "폭포수 모델은 요구사항 변경에 유연하지 못한 것이 단점입니다."
+        },
+        {
+          "id": 15,
+          "question": "나선형 모델의 개발 순서로 올바른 것은?",
+          "options": ["계획 → 분석 → 개발 → 평가", "계획 → 위험분석 → 개발 → 평가", "분석 → 설계 → 구현 → 테스트", "요구 → 설계 → 개발 → 유지보수"],
+          "answer": 2,
+          "explanation": "나선형 모델: 계획 수립 → 위험 분석 → 개발 및 검증 → 고객 평가"
+        },
+        {
+          "id": 16,
+          "question": "클래스 다이어그램에서 연관관계를 표현할 때 '전체-부분' 관계이면서 생명주기가 같은 경우 사용하는 것은?",
+          "options": ["일반화", "집합(Aggregation)", "합성(Composition)", "의존"],
+          "answer": 3,
+          "explanation": "합성(Composition)은 전체-부분 관계이면서 생명주기가 동일한 강한 관계를 나타냅니다. 속이 채워진 마름모로 표현합니다."
+        },
+        {
+          "id": 17,
+          "question": "GoF 디자인 패턴 중 '객체를 생성하는 인터페이스를 정의하지만 어떤 클래스의 인스턴스를 생성할지는 서브클래스가 결정'하는 패턴은?",
+          "options": ["Singleton", "Factory Method", "Prototype", "Builder"],
+          "answer": 2,
+          "explanation": "Factory Method 패턴은 객체 생성을 서브클래스에게 위임하는 패턴입니다."
+        },
+        {
+          "id": 18,
+          "question": "디자인 패턴 중 행위 패턴에 해당하는 것은?",
+          "options": ["Bridge", "Decorator", "Observer", "Facade"],
+          "answer": 3,
+          "explanation": "Observer는 행위 패턴입니다. Bridge, Decorator, Facade는 구조 패턴입니다."
+        },
+        {
+          "id": 19,
+          "question": "UI 설계 원칙 중 '사용자가 쉽게 배우고 익힐 수 있어야 한다'는 원칙은?",
+          "options": ["직관성", "유효성", "학습성", "유연성"],
+          "answer": 3,
+          "explanation": "학습성(Learnability)은 사용자가 쉽게 배우고 익힐 수 있어야 한다는 원칙입니다."
+        },
+        {
+          "id": 20,
+          "question": "SOLID 원칙 중 '상위 모듈은 하위 모듈에 의존해서는 안 되며, 둘 다 추상화에 의존해야 한다'는 원칙은?",
+          "options": ["단일 책임 원칙", "리스코프 치환 원칙", "인터페이스 분리 원칙", "의존 역전 원칙"],
+          "answer": 4,
+          "explanation": "의존 역전 원칙(DIP: Dependency Inversion Principle)은 고수준 모듈이 저수준 모듈에 의존하지 않고, 둘 다 추상화에 의존해야 한다는 원칙입니다."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "소프트웨어 개발",
+      "questions": [
+        {
+          "id": 21,
+          "question": "스택(Stack)의 특징으로 옳은 것은?",
+          "options": ["FIFO(First In First Out)", "LIFO(Last In First Out)", "우선순위에 따른 처리", "랜덤 접근"],
+          "answer": 2,
+          "explanation": "스택은 LIFO(Last In First Out) 구조로, 나중에 삽입된 데이터가 먼저 삭제됩니다."
+        },
+        {
+          "id": 22,
+          "question": "큐(Queue)의 특징으로 옳은 것은?",
+          "options": ["LIFO 구조", "FIFO 구조", "인덱스로 접근", "트리 구조"],
+          "answer": 2,
+          "explanation": "큐는 FIFO(First In First Out) 구조로, 먼저 삽입된 데이터가 먼저 삭제됩니다."
+        },
+        {
+          "id": 23,
+          "question": "이진 트리의 중위 순회(Inorder) 순서는?",
+          "options": ["Root → Left → Right", "Left → Root → Right", "Left → Right → Root", "Right → Left → Root"],
+          "answer": 2,
+          "explanation": "중위 순회(Inorder): Left → Root → Right"
+        },
+        {
+          "id": 24,
+          "question": "이진 트리의 전위 순회(Preorder) 순서는?",
+          "options": ["Root → Left → Right", "Left → Root → Right", "Left → Right → Root", "Right → Root → Left"],
+          "answer": 1,
+          "explanation": "전위 순회(Preorder): Root → Left → Right"
+        },
+        {
+          "id": 25,
+          "question": "이진 트리의 후위 순회(Postorder) 순서는?",
+          "options": ["Root → Left → Right", "Left → Root → Right", "Left → Right → Root", "Root → Right → Left"],
+          "answer": 3,
+          "explanation": "후위 순회(Postorder): Left → Right → Root"
+        },
+        {
+          "id": 26,
+          "question": "해싱(Hashing)에서 서로 다른 키 값이 같은 주소를 갖는 현상을 무엇이라 하는가?",
+          "options": ["오버플로우", "충돌(Collision)", "언더플로우", "스택"],
+          "answer": 2,
+          "explanation": "충돌(Collision)은 서로 다른 키 값이 같은 해시 주소를 갖게 되는 현상입니다."
+        },
+        {
+          "id": 27,
+          "question": "다음 중 비선형 자료구조에 해당하는 것은?",
+          "options": ["배열", "연결 리스트", "스택", "트리"],
+          "answer": 4,
+          "explanation": "트리와 그래프는 비선형 자료구조입니다. 배열, 연결 리스트, 스택, 큐는 선형 자료구조입니다."
+        },
+        {
+          "id": 28,
+          "question": "정렬 알고리즘 중 인접한 두 요소를 비교하여 교환하는 방식의 정렬은?",
+          "options": ["삽입 정렬", "선택 정렬", "버블 정렬", "퀵 정렬"],
+          "answer": 3,
+          "explanation": "버블 정렬은 인접한 두 요소를 비교하여 교환하는 방식입니다."
+        },
+        {
+          "id": 29,
+          "question": "화이트박스 테스트 기법에 해당하지 않는 것은?",
+          "options": ["기초 경로 검사", "조건 검사", "루프 검사", "동치 분할 검사"],
+          "answer": 4,
+          "explanation": "동치 분할 검사는 블랙박스 테스트 기법입니다."
+        },
+        {
+          "id": 30,
+          "question": "블랙박스 테스트 기법에 해당하지 않는 것은?",
+          "options": ["동치 분할 검사", "경계값 분석", "원인-효과 그래프", "조건 검사"],
+          "answer": 4,
+          "explanation": "조건 검사는 화이트박스 테스트 기법입니다."
+        },
+        {
+          "id": 31,
+          "question": "통합 테스트에서 상위 모듈부터 하위 모듈로 통합하면서 테스트하는 방식은?",
+          "options": ["상향식 테스트", "하향식 테스트", "빅뱅 테스트", "회귀 테스트"],
+          "answer": 2,
+          "explanation": "하향식 테스트(Top-Down)는 상위 모듈부터 하위 모듈로 통합하면서 테스트합니다."
+        },
+        {
+          "id": 32,
+          "question": "하향식 통합 테스트에서 아직 개발되지 않은 하위 모듈을 대체하는 것은?",
+          "options": ["드라이버(Driver)", "스텁(Stub)", "테스트 케이스", "오라클"],
+          "answer": 2,
+          "explanation": "스텁(Stub)은 하향식 테스트에서 미구현 하위 모듈을 대체합니다."
+        },
+        {
+          "id": 33,
+          "question": "상향식 통합 테스트에서 상위 모듈을 대체하는 것은?",
+          "options": ["드라이버(Driver)", "스텁(Stub)", "목(Mock)", "페이크(Fake)"],
+          "answer": 1,
+          "explanation": "드라이버(Driver)는 상향식 테스트에서 미구현 상위 모듈을 대체합니다."
+        },
+        {
+          "id": 34,
+          "question": "형상 관리 도구가 아닌 것은?",
+          "options": ["Git", "SVN", "CVS", "JUnit"],
+          "answer": 4,
+          "explanation": "JUnit은 단위 테스트 도구입니다. Git, SVN, CVS는 형상 관리 도구입니다."
+        },
+        {
+          "id": 35,
+          "question": "데이터베이스 스키마의 3계층 중 전체적인 논리적 구조를 정의하는 것은?",
+          "options": ["외부 스키마", "개념 스키마", "내부 스키마", "물리 스키마"],
+          "answer": 2,
+          "explanation": "개념 스키마는 데이터베이스의 전체적인 논리적 구조를 정의합니다."
+        },
+        {
+          "id": 36,
+          "question": "DRM(Digital Rights Management)의 구성 요소가 아닌 것은?",
+          "options": ["콘텐츠 제공자", "콘텐츠 분배자", "패키저", "컴파일러"],
+          "answer": 4,
+          "explanation": "DRM 구성 요소: 콘텐츠 제공자, 콘텐츠 분배자, 패키저, 보안 컨테이너, DRM 컨트롤러, 클리어링 하우스"
+        },
+        {
+          "id": 37,
+          "question": "수식 A*B-C/D를 후위 표기법으로 변환한 것은?",
+          "options": ["AB*CD/-", "AB*C/D-", "*AB-/CD", "-*AB/CD"],
+          "answer": 1,
+          "explanation": "중위 표기법 A*B-C/D → 후위 표기법 AB*CD/-"
+        },
+        {
+          "id": 38,
+          "question": "이진 검색의 시간 복잡도는?",
+          "options": ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+          "answer": 3,
+          "explanation": "이진 검색의 시간 복잡도는 O(log n)입니다."
+        },
+        {
+          "id": 39,
+          "question": "다음 중 해싱 함수가 아닌 것은?",
+          "options": ["제산법", "제곱법", "폴딩법", "분할법"],
+          "answer": 4,
+          "explanation": "해싱 함수: 제산법, 제곱법, 폴딩법, 숫자분석법, 기수변환법"
+        },
+        {
+          "id": 40,
+          "question": "단위 테스트에서 주로 사용되는 기법은?",
+          "options": ["블랙박스 테스트만", "화이트박스 테스트만", "블랙박스와 화이트박스 모두", "알파 테스트"],
+          "answer": 3,
+          "explanation": "단위 테스트에서는 화이트박스와 블랙박스 테스트 기법을 모두 사용합니다."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "데이터베이스 구축",
+      "questions": [
+        {
+          "id": 41,
+          "question": "데이터베이스 설계 단계의 올바른 순서는?",
+          "options": ["개념적 → 논리적 → 물리적", "논리적 → 개념적 → 물리적", "물리적 → 논리적 → 개념적", "개념적 → 물리적 → 논리적"],
+          "answer": 1,
+          "explanation": "데이터베이스 설계: 요구조건 분석 → 개념적 설계 → 논리적 설계 → 물리적 설계"
+        },
+        {
+          "id": 42,
+          "question": "관계형 데이터베이스에서 행(Row)을 의미하는 용어는?",
+          "options": ["속성(Attribute)", "튜플(Tuple)", "도메인(Domain)", "스키마(Schema)"],
+          "answer": 2,
+          "explanation": "튜플(Tuple)은 관계(테이블)의 행(Row)을 의미합니다."
+        },
+        {
+          "id": 43,
+          "question": "관계형 데이터베이스에서 열(Column)을 의미하는 용어는?",
+          "options": ["튜플(Tuple)", "속성(Attribute)", "차수(Degree)", "카디널리티(Cardinality)"],
+          "answer": 2,
+          "explanation": "속성(Attribute)은 관계(테이블)의 열(Column)을 의미합니다."
+        },
+        {
+          "id": 44,
+          "question": "기본키(Primary Key)의 특징으로 옳지 않은 것은?",
+          "options": ["유일성", "최소성", "NULL 허용", "개체 무결성"],
+          "answer": 3,
+          "explanation": "기본키는 NULL 값을 가질 수 없습니다. (개체 무결성)"
+        },
+        {
+          "id": 45,
+          "question": "외래키(Foreign Key)와 관련된 무결성은?",
+          "options": ["개체 무결성", "참조 무결성", "도메인 무결성", "키 무결성"],
+          "answer": 2,
+          "explanation": "참조 무결성은 외래키가 참조하는 테이블의 기본키 값이 존재해야 함을 보장합니다."
+        },
+        {
+          "id": 46,
+          "question": "트랜잭션의 ACID 특성 중 '트랜잭션이 완료되면 결과가 영구적으로 반영되어야 한다'는 것은?",
+          "options": ["원자성(Atomicity)", "일관성(Consistency)", "독립성(Isolation)", "영속성(Durability)"],
+          "answer": 4,
+          "explanation": "영속성(Durability)은 성공적으로 완료된 트랜잭션의 결과가 영구적으로 반영되어야 함을 의미합니다."
+        },
+        {
+          "id": 47,
+          "question": "정규화 과정에서 '도메인이 원자값이어야 한다'는 조건을 만족하면?",
+          "options": ["제1정규형(1NF)", "제2정규형(2NF)", "제3정규형(3NF)", "BCNF"],
+          "answer": 1,
+          "explanation": "제1정규형(1NF)은 모든 도메인이 원자값(Atomic Value)으로만 구성되어야 합니다."
+        },
+        {
+          "id": 48,
+          "question": "정규화 과정에서 '부분적 함수 종속 제거'를 하면?",
+          "options": ["제1정규형(1NF)", "제2정규형(2NF)", "제3정규형(3NF)", "BCNF"],
+          "answer": 2,
+          "explanation": "제2정규형(2NF)은 1NF를 만족하면서 부분적 함수 종속을 제거한 형태입니다."
+        },
+        {
+          "id": 49,
+          "question": "정규화 과정에서 '이행적 함수 종속 제거'를 하면?",
+          "options": ["제1정규형(1NF)", "제2정규형(2NF)", "제3정규형(3NF)", "BCNF"],
+          "answer": 3,
+          "explanation": "제3정규형(3NF)은 2NF를 만족하면서 이행적 함수 종속을 제거한 형태입니다."
+        },
+        {
+          "id": 50,
+          "question": "SQL의 DDL(Data Definition Language) 명령어가 아닌 것은?",
+          "options": ["CREATE", "ALTER", "DROP", "SELECT"],
+          "answer": 4,
+          "explanation": "SELECT는 DML(Data Manipulation Language)입니다. DDL: CREATE, ALTER, DROP, TRUNCATE"
+        },
+        {
+          "id": 51,
+          "question": "SQL의 DML(Data Manipulation Language) 명령어가 아닌 것은?",
+          "options": ["SELECT", "INSERT", "UPDATE", "GRANT"],
+          "answer": 4,
+          "explanation": "GRANT는 DCL(Data Control Language)입니다. DML: SELECT, INSERT, UPDATE, DELETE"
+        },
+        {
+          "id": 52,
+          "question": "SQL의 DCL(Data Control Language) 명령어가 아닌 것은?",
+          "options": ["GRANT", "REVOKE", "COMMIT", "DELETE"],
+          "answer": 4,
+          "explanation": "DELETE는 DML입니다. DCL: GRANT, REVOKE, COMMIT, ROLLBACK"
+        },
+        {
+          "id": 53,
+          "question": "관계대수에서 조건을 만족하는 튜플을 선택하는 연산은?",
+          "options": ["SELECT(σ)", "PROJECT(π)", "JOIN(⋈)", "DIVISION(÷)"],
+          "answer": 1,
+          "explanation": "SELECT(σ)는 조건을 만족하는 튜플을 선택하는 연산입니다."
+        },
+        {
+          "id": 54,
+          "question": "관계대수에서 특정 속성만 추출하는 연산은?",
+          "options": ["SELECT(σ)", "PROJECT(π)", "JOIN(⋈)", "DIVISION(÷)"],
+          "answer": 2,
+          "explanation": "PROJECT(π)는 릴레이션에서 특정 속성만 추출하는 연산입니다."
+        },
+        {
+          "id": 55,
+          "question": "E-R 다이어그램에서 개체(Entity)를 나타내는 기호는?",
+          "options": ["사각형", "타원", "마름모", "이중 타원"],
+          "answer": 1,
+          "explanation": "사각형은 개체(Entity), 타원은 속성(Attribute), 마름모는 관계(Relationship)를 나타냅니다."
+        },
+        {
+          "id": 56,
+          "question": "E-R 다이어그램에서 관계(Relationship)를 나타내는 기호는?",
+          "options": ["사각형", "타원", "마름모", "삼각형"],
+          "answer": 3,
+          "explanation": "마름모는 관계(Relationship)를 나타냅니다."
+        },
+        {
+          "id": 57,
+          "question": "후보키 중에서 기본키로 선정되지 않은 키는?",
+          "options": ["기본키", "대체키", "슈퍼키", "외래키"],
+          "answer": 2,
+          "explanation": "대체키(Alternate Key)는 후보키 중에서 기본키로 선정되지 않은 나머지 키입니다."
+        },
+        {
+          "id": 58,
+          "question": "다음 중 뷰(View)의 특징으로 옳지 않은 것은?",
+          "options": ["논리적 데이터 독립성 제공", "보안 기능 제공", "물리적 저장 공간 차지", "복잡한 쿼리 단순화"],
+          "answer": 3,
+          "explanation": "뷰는 가상 테이블로 물리적 저장 공간을 차지하지 않습니다."
+        },
+        {
+          "id": 59,
+          "question": "분산 데이터베이스의 목표가 아닌 것은?",
+          "options": ["위치 투명성", "중복 투명성", "병행 투명성", "종속 투명성"],
+          "answer": 4,
+          "explanation": "분산 데이터베이스 투명성: 위치, 중복, 병행, 분할, 장애 투명성"
+        },
+        {
+          "id": 60,
+          "question": "인덱스의 특징으로 옳지 않은 것은?",
+          "options": ["검색 속도 향상", "삽입/삭제 시 오버헤드", "추가 저장 공간 필요", "항상 성능 향상"],
+          "answer": 4,
+          "explanation": "인덱스는 검색 속도를 향상시키지만, 삽입/삭제 시 오버헤드가 발생하여 항상 성능이 향상되는 것은 아닙니다."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "프로그래밍 언어 활용",
+      "questions": [
+        {
+          "id": 61,
+          "question": "C언어에서 정수형 변수를 선언하는 키워드는?",
+          "options": ["float", "char", "int", "double"],
+          "answer": 3,
+          "explanation": "int는 정수형 변수를 선언하는 키워드입니다."
+        },
+        {
+          "id": 62,
+          "question": "다음 C 코드의 출력 결과는?\n\nint a = 10, b = 3;\nprintf(\"%d\", a / b);",
+          "options": ["3", "3.33", "3.0", "10"],
+          "answer": 1,
+          "explanation": "정수 나눗셈이므로 소수점 이하는 버려지고 3이 출력됩니다."
+        },
+        {
+          "id": 63,
+          "question": "다음 C 코드의 출력 결과는?\n\nint a = 10, b = 3;\nprintf(\"%d\", a % b);",
+          "options": ["0", "1", "3", "10"],
+          "answer": 2,
+          "explanation": "% 연산자는 나머지를 구합니다. 10 % 3 = 1"
+        },
+        {
+          "id": 64,
+          "question": "C언어에서 비트 AND 연산자는?",
+          "options": ["&&", "&", "||", "|"],
+          "answer": 2,
+          "explanation": "&는 비트 AND 연산자이고, &&는 논리 AND 연산자입니다."
+        },
+        {
+          "id": 65,
+          "question": "C언어에서 포인터 변수가 가리키는 값을 참조하는 연산자는?",
+          "options": ["&", "*", "->", "."],
+          "answer": 2,
+          "explanation": "*는 간접 참조 연산자로 포인터가 가리키는 메모리의 값을 참조합니다."
+        },
+        {
+          "id": 66,
+          "question": "다음 C 코드의 출력 결과는?\n\nint arr[3] = {1, 2, 3};\nprintf(\"%d\", arr[1]);",
+          "options": ["1", "2", "3", "에러"],
+          "answer": 2,
+          "explanation": "배열 인덱스는 0부터 시작하므로 arr[1]은 두 번째 요소인 2입니다."
+        },
+        {
+          "id": 67,
+          "question": "Python에서 리스트의 마지막 요소를 참조하는 인덱스는?",
+          "options": ["0", "1", "-1", "last"],
+          "answer": 3,
+          "explanation": "Python에서 -1은 리스트의 마지막 요소를 참조합니다."
+        },
+        {
+          "id": 68,
+          "question": "다음 Python 코드의 출력 결과는?\n\nprint(list(range(1, 5)))",
+          "options": ["[1, 2, 3, 4]", "[1, 2, 3, 4, 5]", "[0, 1, 2, 3, 4]", "[1, 5]"],
+          "answer": 1,
+          "explanation": "range(1, 5)는 1부터 4까지의 숫자를 생성합니다. (5는 미포함)"
+        },
+        {
+          "id": 69,
+          "question": "OSI 7계층 중 네트워크 계층의 역할은?",
+          "options": ["데이터 전송", "경로 설정(라우팅)", "세션 관리", "데이터 암호화"],
+          "answer": 2,
+          "explanation": "네트워크 계층은 경로 설정(라우팅) 기능을 담당합니다."
+        },
+        {
+          "id": 70,
+          "question": "OSI 7계층의 순서로 올바른 것은? (하위 → 상위)",
+          "options": ["물리-데이터링크-네트워크-전송-세션-표현-응용", "물리-네트워크-데이터링크-전송-세션-표현-응용", "응용-표현-세션-전송-네트워크-데이터링크-물리", "물리-데이터링크-전송-네트워크-세션-표현-응용"],
+          "answer": 1,
+          "explanation": "OSI 7계층(하위→상위): 물리 - 데이터링크 - 네트워크 - 전송 - 세션 - 표현 - 응용"
+        },
+        {
+          "id": 71,
+          "question": "IPv4 주소의 길이는?",
+          "options": ["16비트", "32비트", "64비트", "128비트"],
+          "answer": 2,
+          "explanation": "IPv4는 32비트, IPv6는 128비트 주소 체계를 사용합니다."
+        },
+        {
+          "id": 72,
+          "question": "IPv6 주소의 길이는?",
+          "options": ["32비트", "64비트", "128비트", "256비트"],
+          "answer": 3,
+          "explanation": "IPv6는 128비트 주소 체계를 사용합니다."
+        },
+        {
+          "id": 73,
+          "question": "UNIX에서 파일 권한을 변경하는 명령어는?",
+          "options": ["chown", "chmod", "chgrp", "chdir"],
+          "answer": 2,
+          "explanation": "chmod는 파일 권한(permission)을 변경하는 명령어입니다."
+        },
+        {
+          "id": 74,
+          "question": "페이지 교체 알고리즘 중 가장 오랫동안 사용되지 않은 페이지를 교체하는 것은?",
+          "options": ["FIFO", "LRU", "LFU", "OPT"],
+          "answer": 2,
+          "explanation": "LRU(Least Recently Used)는 가장 오랫동안 사용되지 않은 페이지를 교체합니다."
+        },
+        {
+          "id": 75,
+          "question": "프로세스 스케줄링 기법 중 대기 시간이 긴 작업에 우선순위를 주는 것은?",
+          "options": ["SJF", "FCFS", "HRN", "Round Robin"],
+          "answer": 3,
+          "explanation": "HRN(Highest Response-ratio Next)은 대기 시간이 긴 작업에 우선순위를 부여합니다."
+        },
+        {
+          "id": 76,
+          "question": "다음 C 코드의 출력 결과는?\n\nint x = 5;\nprintf(\"%d\", x++);",
+          "options": ["4", "5", "6", "에러"],
+          "answer": 2,
+          "explanation": "x++는 후위 증가 연산자로, 현재 값(5)을 먼저 출력한 후 증가시킵니다."
+        },
+        {
+          "id": 77,
+          "question": "다음 C 코드의 출력 결과는?\n\nint x = 5;\nprintf(\"%d\", ++x);",
+          "options": ["4", "5", "6", "에러"],
+          "answer": 3,
+          "explanation": "++x는 전위 증가 연산자로, 먼저 증가시킨 후 출력합니다. (6)"
+        },
+        {
+          "id": 78,
+          "question": "교착상태(Deadlock)의 필요 조건이 아닌 것은?",
+          "options": ["상호 배제", "점유와 대기", "비선점", "순환 종료"],
+          "answer": 4,
+          "explanation": "교착상태 4가지 조건: 상호 배제, 점유와 대기, 비선점, 환형 대기"
+        },
+        {
+          "id": 79,
+          "question": "TCP와 UDP 중 신뢰성 있는 전송을 보장하는 것은?",
+          "options": ["TCP만", "UDP만", "둘 다", "둘 다 아님"],
+          "answer": 1,
+          "explanation": "TCP는 신뢰성 있는 연결형 프로토콜이고, UDP는 비연결형 프로토콜입니다."
+        },
+        {
+          "id": 80,
+          "question": "다음 Python 코드의 출력 결과는?\n\na = [1, 2, 3, 4, 5]\nprint(a[1:4])",
+          "options": ["[1, 2, 3]", "[2, 3, 4]", "[2, 3, 4, 5]", "[1, 2, 3, 4]"],
+          "answer": 2,
+          "explanation": "슬라이싱 a[1:4]는 인덱스 1부터 3까지의 요소 [2, 3, 4]를 반환합니다."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "정보시스템 구축 관리",
+      "questions": [
+        {
+          "id": 81,
+          "question": "COCOMO 모델의 프로젝트 유형 중 5만 라인 이하의 소규모 프로젝트는?",
+          "options": ["조직형(Organic)", "반분리형(Semi-detached)", "내장형(Embedded)", "기본형(Basic)"],
+          "answer": 1,
+          "explanation": "조직형(Organic): 5만 라인 이하, 반분리형: 30만 라인 이하, 내장형: 30만 라인 이상"
+        },
+        {
+          "id": 82,
+          "question": "LOC(Lines of Code) 기법의 특징으로 옳지 않은 것은?",
+          "options": ["예측치 계산 용이", "프로그래밍 언어에 독립적", "소스 코드 라인 수 기반", "가장 전통적인 방법"],
+          "answer": 2,
+          "explanation": "LOC 기법은 프로그래밍 언어에 따라 라인 수가 달라지므로 언어에 종속적입니다."
+        },
+        {
+          "id": 83,
+          "question": "소프트웨어 품질 관리 모델 중 5단계 성숙도 수준을 가진 것은?",
+          "options": ["ISO 9001", "CMMI", "Six Sigma", "TQM"],
+          "answer": 2,
+          "explanation": "CMMI는 5단계 성숙도 수준(초기→관리→정의→정량적관리→최적화)을 가집니다."
+        },
+        {
+          "id": 84,
+          "question": "보안의 3요소가 아닌 것은?",
+          "options": ["기밀성", "무결성", "가용성", "신속성"],
+          "answer": 4,
+          "explanation": "보안 3요소(CIA): 기밀성(Confidentiality), 무결성(Integrity), 가용성(Availability)"
+        },
+        {
+          "id": 85,
+          "question": "대칭키 암호화 알고리즘에 해당하는 것은?",
+          "options": ["RSA", "AES", "ECC", "ElGamal"],
+          "answer": 2,
+          "explanation": "AES, DES, 3DES는 대칭키 암호화 알고리즘입니다. RSA, ECC, ElGamal은 비대칭키입니다."
+        },
+        {
+          "id": 86,
+          "question": "공개키(비대칭키) 암호화 알고리즘에 해당하는 것은?",
+          "options": ["DES", "AES", "RSA", "3DES"],
+          "answer": 3,
+          "explanation": "RSA는 대표적인 공개키(비대칭키) 암호화 알고리즘입니다."
+        },
+        {
+          "id": 87,
+          "question": "SQL Injection 공격의 설명으로 옳은 것은?",
+          "options": ["악성 스크립트를 웹페이지에 삽입", "SQL 쿼리에 악성 코드 삽입", "시스템 자원 고갈 공격", "세션 탈취 공격"],
+          "answer": 2,
+          "explanation": "SQL Injection은 입력 값에 SQL 명령어를 삽입하여 데이터베이스를 조작하는 공격입니다."
+        },
+        {
+          "id": 88,
+          "question": "XSS(Cross Site Scripting) 공격의 설명으로 옳은 것은?",
+          "options": ["SQL 쿼리 조작", "악성 스크립트를 웹페이지에 삽입", "서비스 거부 공격", "중간자 공격"],
+          "answer": 2,
+          "explanation": "XSS는 악성 스크립트를 웹페이지에 삽입하여 사용자의 정보를 탈취하는 공격입니다."
+        },
+        {
+          "id": 89,
+          "question": "DoS(Denial of Service) 공격의 목적은?",
+          "options": ["데이터 탈취", "서비스 마비", "권한 상승", "암호 해독"],
+          "answer": 2,
+          "explanation": "DoS 공격은 시스템이나 네트워크를 과부하 상태로 만들어 서비스를 마비시키는 것이 목적입니다."
+        },
+        {
+          "id": 90,
+          "question": "방화벽(Firewall)의 주요 기능은?",
+          "options": ["바이러스 검사", "네트워크 트래픽 필터링", "데이터 암호화", "백업 관리"],
+          "answer": 2,
+          "explanation": "방화벽은 네트워크 트래픽을 모니터링하고 필터링하여 보안을 제공합니다."
+        },
+        {
+          "id": 91,
+          "question": "IDS(Intrusion Detection System)의 역할은?",
+          "options": ["바이러스 제거", "침입 탐지", "데이터 암호화", "접근 제어"],
+          "answer": 2,
+          "explanation": "IDS는 네트워크나 시스템의 침입을 탐지하는 보안 시스템입니다."
+        },
+        {
+          "id": 92,
+          "question": "클라우드 서비스 모델 중 인프라만 제공하는 것은?",
+          "options": ["SaaS", "PaaS", "IaaS", "DaaS"],
+          "answer": 3,
+          "explanation": "IaaS(Infrastructure as a Service)는 서버, 스토리지 등 인프라를 제공합니다."
+        },
+        {
+          "id": 93,
+          "question": "클라우드 서비스 모델 중 플랫폼을 제공하는 것은?",
+          "options": ["SaaS", "PaaS", "IaaS", "BaaS"],
+          "answer": 2,
+          "explanation": "PaaS(Platform as a Service)는 개발 플랫폼을 제공합니다."
+        },
+        {
+          "id": 94,
+          "question": "소프트웨어 재공학의 활동이 아닌 것은?",
+          "options": ["분석(Analysis)", "재구성(Restructuring)", "역공학(Reverse Engineering)", "신규개발(New Development)"],
+          "answer": 4,
+          "explanation": "재공학 활동: 분석, 재구성, 역공학, 이식(Migration)"
+        },
+        {
+          "id": 95,
+          "question": "역공학(Reverse Engineering)의 설명으로 옳은 것은?",
+          "options": ["소스 코드를 기계어로 변환", "기존 시스템을 분석하여 설계 정보 추출", "새로운 시스템 개발", "테스트 자동화"],
+          "answer": 2,
+          "explanation": "역공학은 기존 소프트웨어를 분석하여 설계나 명세 정보를 추출하는 과정입니다."
+        },
+        {
+          "id": 96,
+          "question": "네트워크를 소프트웨어로 제어하고 관리하는 기술은?",
+          "options": ["IoT", "SDN", "VPN", "CDN"],
+          "answer": 2,
+          "explanation": "SDN(Software Defined Networking)은 네트워크를 소프트웨어로 제어하는 기술입니다."
+        },
+        {
+          "id": 97,
+          "question": "해시 함수의 특징으로 옳지 않은 것은?",
+          "options": ["단방향 함수", "고정 길이 출력", "복호화 가능", "충돌 회피"],
+          "answer": 3,
+          "explanation": "해시 함수는 단방향 함수로 복호화가 불가능합니다."
+        },
+        {
+          "id": 98,
+          "question": "프로젝트 관리 도구 중 작업 간의 의존관계와 임계경로를 파악하는 것은?",
+          "options": ["간트 차트", "PERT/CPM", "WBS", "피쉬본 다이어그램"],
+          "answer": 2,
+          "explanation": "PERT/CPM은 작업 간 의존관계를 네트워크로 표현하고 임계경로를 파악합니다."
+        },
+        {
+          "id": 99,
+          "question": "VPN(Virtual Private Network)의 주요 기능은?",
+          "options": ["바이러스 검사", "암호화된 터널링", "로드 밸런싱", "캐싱"],
+          "answer": 2,
+          "explanation": "VPN은 공용 네트워크를 통해 암호화된 터널을 만들어 안전한 통신을 제공합니다."
+        },
+        {
+          "id": 100,
+          "question": "기능점수(Function Point) 산정의 기능 유형이 아닌 것은?",
+          "options": ["외부 입력", "외부 출력", "내부 논리 파일", "코드 라인 수"],
+          "answer": 4,
+          "explanation": "기능점수 5가지 기능 유형: 외부 입력, 외부 출력, 외부 조회, 내부 논리 파일, 외부 인터페이스 파일"
+        }
+      ]
+    }
+  ]
+}

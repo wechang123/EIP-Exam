@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정보처리기사 필기 모의고사 - 시험</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="exam-container">
+        <!-- 상단 바 -->
+        <header class="exam-header">
+            <div class="header-left">
+                <h1>정보처리기사 필기 모의고사</h1>
+            </div>
+            <div class="header-right">
+                <div class="timer" id="timer">
+                    <span class="timer-icon">&#9201;</span>
+                    <span id="time-display">100:00</span>
+                    <button class="timer-toggle-btn" id="timer-toggle" onclick="toggleTimer()">⏸ 일시정지</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- 과목 탭 -->
+        <nav class="subject-tabs">
+            <button class="tab-btn active" data-subject="1">1과목<br><small>소프트웨어 설계</small></button>
+            <button class="tab-btn" data-subject="2">2과목<br><small>소프트웨어 개발</small></button>
+            <button class="tab-btn" data-subject="3">3과목<br><small>데이터베이스 구축</small></button>
+            <button class="tab-btn" data-subject="4">4과목<br><small>프로그래밍 언어 활용</small></button>
+            <button class="tab-btn" data-subject="5">5과목<br><small>정보시스템 구축 관리</small></button>
+        </nav>
+
+        <!-- 메인 컨텐츠 -->
+        <main class="exam-main">
+            <!-- 문제 영역 (왼쪽) -->
+            <section class="question-area">
+                <div class="question-header">
+                    <span class="question-number" id="question-number">문제 1</span>
+                    <span class="subject-name" id="subject-name">1과목: 소프트웨어 설계</span>
+                </div>
+                <div class="question-content" id="question-content">
+                    <!-- 문제 내용이 여기에 표시됩니다 -->
+                </div>
+                <div class="options-area" id="options-area">
+                    <!-- 선택지가 여기에 표시됩니다 -->
+                </div>
+
+                <!-- 네비게이션 버튼 -->
+                <div class="nav-buttons">
+                    <button class="btn btn-secondary" id="prev-btn" onclick="prevQuestion()">
+                        &#9664; 이전
+                    </button>
+                    <button class="btn btn-secondary" id="next-btn" onclick="nextQuestion()">
+                        다음 &#9654;
+                    </button>
+                </div>
+            </section>
+
+            <!-- 답안지 영역 (오른쪽) -->
+            <aside class="answer-sheet">
+                <div class="answer-sheet-header">
+                    <h3>답안지</h3>
+                    <span id="answered-count">0 / 100</span>
+                </div>
+                <div class="answer-grid" id="answer-grid">
+                    <!-- 답안 버튼들이 여기에 생성됩니다 -->
+                </div>
+                <div class="submit-area">
+                    <button class="btn btn-warning btn-large" onclick="submitCurrentSubject()" style="margin-bottom: 10px;">
+                        현재 과목만 제출
+                    </button>
+                    <button class="btn btn-danger btn-large" onclick="submitExam()">
+                        전체 시험 종료
+                    </button>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <!-- 시험 종료 확인 모달 -->
+    <div class="modal" id="submit-modal">
+        <div class="modal-content">
+            <h2>시험을 종료하시겠습니까?</h2>
+            <p id="modal-message">아직 풀지 않은 문제가 있습니다.</p>
+            <div class="modal-buttons">
+                <button class="btn btn-secondary" onclick="closeModal()">취소</button>
+                <button class="btn btn-primary" onclick="confirmSubmit()">종료</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/questions.js"></script>
+    <script src="js/exam.js"></script>
+</body>
+</html>

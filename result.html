@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정보처리기사 필기 모의고사 - 결과</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container result-page">
+        <header>
+            <h1>시험 결과</h1>
+        </header>
+
+        <main>
+            <!-- 합격/불합격 표시 -->
+            <div class="result-banner" id="result-banner">
+                <!-- 합격/불합격 배너가 여기에 표시됩니다 -->
+            </div>
+
+            <!-- 점수 요약 -->
+            <div class="score-summary">
+                <div class="total-score" id="total-score">
+                    <!-- 총점이 여기에 표시됩니다 -->
+                </div>
+            </div>
+
+            <!-- 과목별 점수 -->
+            <div class="subject-scores" id="subject-scores">
+                <!-- 과목별 점수가 여기에 표시됩니다 -->
+            </div>
+
+            <!-- 상세 결과 토글 -->
+            <div class="detail-section">
+                <h2>상세 결과</h2>
+                <div class="filter-buttons">
+                    <button class="btn btn-small active" data-filter="all" onclick="filterQuestions('all')">전체</button>
+                    <button class="btn btn-small" data-filter="wrong" onclick="filterQuestions('wrong')">틀린 문제</button>
+                    <button class="btn btn-small" data-filter="correct" onclick="filterQuestions('correct')">맞은 문제</button>
+                </div>
+
+                <!-- 과목별 상세 결과 -->
+                <div class="detailed-results" id="detailed-results">
+                    <!-- 상세 결과가 여기에 표시됩니다 -->
+                </div>
+            </div>
+
+            <!-- 버튼 영역 -->
+            <div class="button-area">
+                <button class="btn btn-secondary" onclick="location.href='index.html'">
+                    메인으로
+                </button>
+                <button class="btn btn-primary" onclick="retakeExam()">
+                    다시 시험보기
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/result.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정보처리기사 필기 모의고사</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container main-page">
+        <header>
+            <h1>정보처리기사 필기 모의고사</h1>
+        </header>
+
+        <main>
+            <div class="info-card">
+                <h2>시험 안내</h2>
+                <ul class="info-list">
+                    <li><span class="label">문항 수:</span> 총 100문제 (5과목 x 20문제)</li>
+                    <li><span class="label">시험 시간:</span> 100분 (2시간 30분)</li>
+                    <li><span class="label">문제 유형:</span> 4지선다 객관식</li>
+                    <li><span class="label">배점:</span> 문항당 1점 (과목당 20점)</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h2>합격 기준</h2>
+                <ul class="info-list">
+                    <li><span class="label">과목 합격:</span> 과목당 40점 이상 (8문제)</li>
+                    <li><span class="label">전체 합격:</span> 평균 60점 이상 (60문제)</li>
+                    <li><span class="label">과락 기준:</span> 과목당 40점 미만 시 과락</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h2>시험 과목</h2>
+                <ol class="subject-list">
+                    <li>소프트웨어 설계</li>
+                    <li>소프트웨어 개발</li>
+                    <li>데이터베이스 구축</li>
+                    <li>프로그래밍 언어 활용</li>
+                    <li>정보시스템 구축 관리</li>
+                </ol>
+            </div>
+
+            <div class="button-area">
+                <button class="btn btn-primary btn-large" onclick="startExam()">
+                    시험 시작하기
+                </button>
+            </div>
+        </main>
+
+        <footer>
+            <p>정보처리기사 필기 시험 대비 학습용 모의고사입니다.</p>
+        </footer>
+    </div>
+
+    <script>
+        function startExam() {
+            // 기존 시험 데이터 초기화
+            localStorage.removeItem('examAnswers');
+            localStorage.removeItem('examQuestions');
+            localStorage.removeItem('examStartTime');
+
+            // 시험 페이지로 이동
+            window.location.href = 'exam.html';
+        }
+    </script>
+</body>
+</html>
