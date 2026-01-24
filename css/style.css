@@ -790,11 +790,38 @@ footer {
         flex-direction: column;
     }
 
+    /* 타이머 크기 축소 */
+    .timer {
+        font-size: 0.65rem;
+        padding: 8px 12px;
+    }
+
+    .timer-toggle-btn {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+        margin-left: 6px;
+    }
+
+    /* 답안지 스크롤 개선 */
     .answer-sheet {
         width: 100%;
         border-left: none;
         border-top: 1px solid #ddd;
-        max-height: 300px;
+        max-height: none;
+        min-height: 400px;
+    }
+
+    .answer-grid {
+        max-height: 250px;
+        overflow-y: auto;
+    }
+
+    .submit-area {
+        position: sticky;
+        bottom: 0;
+        background: #ecf0f1;
+        padding-top: 15px;
+        z-index: 10;
     }
 
     .subject-tabs {
