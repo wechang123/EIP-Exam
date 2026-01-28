@@ -310,6 +310,16 @@ footer {
     font-size: 0.95rem;
 }
 
+.exam-info {
+    color: #27ae60;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: #e8f5e9;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-left: 10px;
+}
+
 .question-content {
     font-size: 1.1rem;
     line-height: 1.8;

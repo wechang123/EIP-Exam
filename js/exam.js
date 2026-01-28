@@ -210,6 +210,7 @@ class UIManager {
         this.elements = {
             questionNumber: document.getElementById('question-number'),
             subjectName: document.getElementById('subject-name'),
+            examInfo: document.getElementById('exam-info'),
             questionContent: document.getElementById('question-content'),
             optionsArea: document.getElementById('options-area'),
             answerGrid: document.getElementById('answer-grid'),
@@ -223,9 +224,23 @@ class UIManager {
         };
     }
 
+    formatExamInfo(exam) {
+        // exam: "2024-1" → "(24년 1회)"
+        // exam: "2025-3" → "(25년 3회)"
+        if (!exam) return '';
+
+        const [year, round] = exam.split('-');
+        const shortYear = year.slice(2); // "2024" → "24"
+
+        return `(${shortYear}년 ${round}회)`;
+    }
+
     displayQuestion(question, selectedAnswer) {
         this.elements.questionNumber.textContent = `문제 ${question.examNumber}`;
         this.elements.subjectName.textContent = `${question.subjectId}과목: ${question.subjectName}`;
+
+        // exam 정보 표시 추가
+        this.elements.examInfo.textContent = this.formatExamInfo(question.exam);
 
         if (question.questionHTML) {
             this.elements.questionContent.innerHTML = question.question + question.questionHTML;
